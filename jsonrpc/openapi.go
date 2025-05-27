@@ -48,7 +48,7 @@ func isNillableType(t reflect.Type) bool {
 	}
 }
 
-// Function to dynamically create the Request type with Params of type iType
+// Function to dynamically create the Request type with Params of type iType.
 func getRequestType(iType reflect.Type, isNotification bool) reflect.Type {
 	// Get the reflect.Type of Request[any]
 	requestAnyType := reflect.TypeOf(RequestAny{})
@@ -155,7 +155,7 @@ func getResponseSchema(
 	return responseSchema
 }
 
-// Function to create the success response type dynamically
+// Function to create the success response type dynamically.
 func getSuccessResponseType(resultType reflect.Type) reflect.Type {
 	fields := []reflect.StructField{
 		{
@@ -185,7 +185,7 @@ func getSuccessResponseType(resultType reflect.Type) reflect.Type {
 	return reflect.StructOf(fields)
 }
 
-// Function to create the error response type dynamically
+// Function to create the error response type dynamically.
 func getErrorResponseType(errorType reflect.Type) reflect.Type {
 	fields := []reflect.StructField{
 		{
